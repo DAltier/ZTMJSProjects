@@ -12,7 +12,6 @@ const duration = document.querySelector('.time-duration');
 const fullscreenBtn = document.querySelector('.fullscreen');
 
 // Play & Pause ----------------------------------- //
-
 function showPlayIcon() {
   playBtn.classList.replace('fa-pause', 'fa-play');
   playBtn.setAttribute('title', 'Play');
@@ -57,7 +56,6 @@ function setProgress(e) {
 }
 
 // Volume Controls --------------------------- //
-
 let lastVolume = 1;
 
 // Mute
@@ -102,7 +100,6 @@ function changeVolume(e) {
 }
 
 // Change Playback Speed -------------------- //
-
 function changeSpeed() {
   video.playbackRate = speed.value;
 }
@@ -147,11 +144,7 @@ let fullscreen = false;
 
 // Toggle fullscreen
 function toggleFullscreen() {
-  if (!fullscreen) {
-    openFullscreen(player);
-  } else {
-    closeFullscreen();
-  }
+  !fullscreen ? openFullscreen(player) : closeFullscreen();
   fullscreen = !fullscreen;
 }
 
